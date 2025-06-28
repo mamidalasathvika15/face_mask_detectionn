@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Mask Detection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .preview {
+            margin-top: 20px;
+        }
+        .preview img {
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #0a0a0a;
+        }
+        form {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>😷 Face Mask Detection</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if image_path %}
+    <div class="preview">
+        <p>Uploaded Image:</p>
+        <img src="{{ image_path }}" alt="Uploaded Image">
+    </div>
+    {% endif %}
+
+    {% if result %}
+    <div class="result">
+        🔍 Result: {{ result }}
+    </div>
+    {% endif %}
+</body>
+</html>
