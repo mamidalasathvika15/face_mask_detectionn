@@ -64,7 +64,7 @@ face_mask_detectionn/
 
 ## 🌐 Web App Output Sample
 
-![Web App Output](webapp/static/output_sample.png)
+![Screenshot 2025-06-29 002943](https://github.com/user-attachments/assets/17501f3f-e1c1-400c-b3dd-0c1129515abe)
 
 ---
 
